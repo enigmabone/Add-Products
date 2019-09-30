@@ -4,7 +4,11 @@
     <b-container>
       <b-row class="justify-content-center">
         <AddProduct @addProduct="addProduct" />
-        <ListProduct :products="productList" @delProduct="delProduct" />
+        <ListProduct
+          :products="productList"
+          @delProduct="delProduct"
+          @updateProduct="updateProduct"
+        />
       </b-row>
     </b-container>
   </div>
@@ -15,13 +19,15 @@ import Navbar from "./components/Navbar.vue";
 import AddProduct from "./components/AddProduct.vue";
 import ListProduct from "./components/ListProduct.vue";
 import axios from "axios";
+import UpdateProduct from "./components/UpdateProduct.vue";
 
 export default {
   name: "app",
   components: {
     Navbar,
     ListProduct,
-    AddProduct
+    AddProduct,
+    UpdateProduct
   },
   data() {
     return {
@@ -55,6 +61,17 @@ export default {
         console.log("Error", error);
       }
       console.log("productid", productid);
+    },
+    async updateProduct(updatedProduct) {
+      try {
+        await axios.put(
+          `http://localhost:3000/products/${updatedProduct.id}`,
+          updatedProduct
+        );
+        this.getProductList();
+      } catch (error) {
+        console.log("Error", error);
+      }
     }
   },
   mounted() {

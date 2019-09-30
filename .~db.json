@@ -13,6 +13,13 @@
       "brand": "Diamond Supply Co.",
       "inventoryStatus": false,
       "id": 2
+    },
+    {
+      "name": "Leather Belt",
+      "price": "$38",
+      "brand": "Nike",
+      "inventoryStatus": true,
+      "id": 3
     }
   ]
 }

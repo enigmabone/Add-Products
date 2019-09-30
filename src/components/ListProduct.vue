@@ -34,9 +34,7 @@
               </b-button>
             </b-col>
             <b-col>
-              <b-button variant="info">
-                <i class="far fa-edit"></i>
-              </b-button>
+              <UpdateProduct :product="product" @updateProduct="updateProduct" />
             </b-col>
           </b-row>
         </b-card>
@@ -45,12 +43,19 @@
   </b-col>
 </template>
 <script>
+import UpdateProduct from "./UpdateProduct.vue";
 export default {
   name: "ListProduct",
   props: ["products"],
+  components: {
+    UpdateProduct
+  },
   methods: {
     delProduct(productid) {
       this.$emit("delProduct", productid);
+    },
+    updateProduct(updatedProduct) {
+      this.$emit("updateProduct", updatedProduct);
     }
   }
 };

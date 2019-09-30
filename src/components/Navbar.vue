@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" type="dark" variant="info">
+    <b-navbar toggleable="sm" type="dark" variant="info">
       <b-container fluid>
         <b-navbar-brand tag="h1" class="mb-0" href="#">
           <i class="fas fa-cloud-sun-rain"></i>Product Manager
