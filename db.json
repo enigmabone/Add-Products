@@ -1,18 +1,18 @@
 {
   "products": [
     {
-      "name": "Jeans",
-      "price": "$45",
-      "brand": "Volcom",
-      "inventoryStatus": true,
-      "id": 1
-    },
-    {
       "name": "T-Shirt",
-      "price": "$55",
+      "price": "$12",
       "brand": "Diamond Supply Co.",
       "inventoryStatus": false,
       "id": 2
+    },
+    {
+      "name": "Leather Belt",
+      "price": "$38",
+      "brand": "Nike",
+      "inventoryStatus": true,
+      "id": 3
     }
   ]
 }
